@@ -1,0 +1,24 @@
+<h2>Template driven form</h2>
+<p>uses data binding</p>
+<p>most of the logic is on template side</p>
+<p>uses forms module/ ngmodel</p>
+
+<form #f="ngForm" novalidate>
+    <div>
+        <input type=" text" name="userName" #userName="ngModel" [(ngModel)]="employee.username" minlength="4" required>
+        <div *ngIf="f.submitted && userName.errors">
+            <div *ngIf="userName.errors?.['required']">User Name is required</div>
+            <div *ngIf="userName.errors?.['minlength']">min length should be 4</div>
+        </div>
+    </div>
+    <div>
+        <input type="password" [(ngModel)]="employee.password">
+    </div>
+    <div>
+        <button (click)="submit(f)">Submit</button>
+    </div>
+
+</form>
+<!-- password required, one more validation -->
+<!--  login, register design -->
+<!-- register using reactive forms / try -->

@@ -1,0 +1,60 @@
+<p>uses reactiveforms module</p>
+
+<p>logic/validation is in the component side</p>
+<p>uses formcontrolname</p>
+<p>does not use model</p>
+
+<form class="ml-2" [formGroup]="registerForm">
+    <div>
+        <label for="">name</label>
+        <input type="text" formControlName="name" />
+
+        <div *ngIf="submitted && f?.['name'].errors">
+            <div *ngIf="f?.['name'].errors?.['required']"> Name is required</div>
+        </div>
+    </div>
+    <div>
+        <label for="">User Name</label>
+
+        <input type="text" formControlName="username" />
+
+        <div *ngIf="submitted && f?.['username'].errors">
+            <div *ngIf="f?.['username'].errors?.['required']">User Name is required</div>
+        </div>
+    </div>
+    <div>
+        <label for="">password</label>
+
+        <input type="text" formControlName="password" />
+        <div *ngIf="submitted && f?.['password'].errors">
+            <div *ngIf="f?.['password'].errors?.['required']">password is required</div>
+        </div>
+    </div>
+    <div>
+        <label for="">city</label>
+
+        <input type="text" formControlName="city" />
+        <div *ngIf="submitted && f?.['city'].errors">
+            <div *ngIf="f?.['city'].errors?.['required']">city is required</div>
+        </div>
+    </div>
+    <div>
+        <label for="">phone</label>
+
+        <input type="text" formControlName="phone" />
+        <div *ngIf="submitted && f?.['phone'].errors">
+            <div *ngIf="f?.['phone'].errors?.['required']">phone is required</div>
+        </div>
+    </div>
+    <div>
+        <label for="">designation</label>
+
+        <input type="text" formControlName="designation" />
+        <div *ngIf="submitted && f?.['designation'].errors">
+            <div *ngIf="f?.['designation'].errors?.['required']">phone is required</div>
+        </div>
+    </div>
+    <div>
+        <button (click)="isEditPage ? onUpdate():  onSubmit()">{{isEditPage ? 'update': 'submit'}}</button>
+    </div>
+</form>

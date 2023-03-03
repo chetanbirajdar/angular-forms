@@ -1,0 +1,26 @@
+<div class="parent">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius provident architecto perspiciatis.
+
+
+    <p>
+        1. @Input decorator declaration in child
+        2. Property binding
+    </p>
+    <p>
+        {{welcomeToParent}}
+    </p>
+
+    <app-child-demo (childClick)="someMethod($event)" [childProperty]="'Hello from Parent'">hello there</app-child-demo>
+    <app-child-demo (childClick)="someMethod($event)" [childProperty]="'Hello from Parent'">hello there</app-child-demo>
+
+    <app-child-demo (childClick)="someMethod($event)" [childProperty]="'Hello from Parent'">hello there</app-child-demo>
+
+</div>
+
+<h3>View Child</h3>
+
+<div #myDiv>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ipsa! Quam, nihil. Eaque molestias ullam,
+    mollitia accusantium consequuntur earum esse delectus aspernatur modi vitae dolor corrupti consectetur aperiam in
+    expedita.
+</div>
