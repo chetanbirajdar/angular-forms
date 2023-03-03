@@ -1,0 +1,39 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "chetan",
+      "username": "cb123",
+      "password": "euxosoodf",
+      "city": "pune",
+      "phone": "2323",
+      "designation": "sr associate"
+    },
+    {
+      "id": 2,
+      "name": "isha",
+      "username": "isha12",
+      "password": "ishasdg",
+      "city": "kolkata",
+      "phone": "555555",
+      "designation": "devops"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

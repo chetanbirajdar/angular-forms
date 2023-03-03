@@ -1,0 +1,25 @@
+<h2>String interpolation</h2>
+
+{{2 + 2}}
+
+<h2>One way data binding</h2>
+<p>component to view</p>
+
+{{hello}}
+
+<h2>Two way data binding</h2>
+
+<p>component to view + view to component</p>
+
+<input type="text" [(ngModel)]="twoWay">
+
+{{twoWay}}
+
+<h2>Event Binding</h2>
+
+<button (dblclick)="changeName('double click')" (click)="changeName('click')">Click me </button>
+
+<h2>Property Binding</h2>
+
+
+<input [disabled]="isDisabled" [type]="propertyBinding" name="" id="">

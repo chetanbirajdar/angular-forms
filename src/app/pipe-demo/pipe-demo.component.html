@@ -1,0 +1,23 @@
+<p>pipe-demo works!</p>
+
+<div>Original Value : {{currentDate}}</div>
+
+<div>Value with pipe: {{currentDate | date }}</div>
+
+<div>Value with pipe and parameters: {{currentDate | date : 'full'}}</div>
+
+<div>currency : {{45 | currency:'INR'}}</div>
+
+<!-- All inbuilt pipes - write 1 example each -->
+
+<h3>Custom pipe</h3>
+
+<p>{{45 | rupee}}</p>
+
+<h3>Pure and impure sort</h3>
+
+<div>Original array : {{num}}</div>
+<div>Pure sort array : {{num | pureSort}}</div>
+<div>impure sort array : {{num | impureSort}}</div>
+
+<button (click)="addNumber(5)">Add number</button>

@@ -1,0 +1,93 @@
+<h2>Structural directives</h2>
+
+<h4>ng if</h4>
+<p *ngIf="someVar == undefined">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nemo cum modi.</p>
+<p style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis nemo cum modi.</p>
+
+<ng-container *ngIf="false; else elseTemplate">
+    condition is true
+</ng-container>
+<ng-template #elseTemplate>
+    condition is false
+</ng-template>
+
+
+<p *ngFor="let i of emp">
+    {{i.name}} - {{i.city}}
+    <!-- <img src="assets/images/gallery-1.png" alt=""> -->
+</p>
+
+
+<h4>ng For</h4>
+
+<p *ngFor="let i of emp">
+    {{i.name}} - {{i.city}}
+    <!-- <img src="assets/images/gallery-1.png" alt=""> -->
+</p>
+
+<h4>ng switch</h4>
+
+<span [ngSwitch]="0">
+    <p *ngSwitchCase="true">
+        true printed
+    </p>
+    <p *ngSwitchCase="false">
+        false printed
+    </p>
+    <p *ngSwitchCase="3">
+        1 printed
+    </p>
+    <p *ngSwitchCase="2">
+        2 printed
+    </p>
+    <p *ngSwitchDefault>
+        default printed
+    </p>
+</span>
+
+<span [ngSwitch]="selectedVal">
+    <p *ngSwitchCase="'true'">
+        isha is printed
+    </p>
+    <p *ngSwitchCase="'false'">
+        ganesh is printed
+    </p>
+    <p *ngSwitchDefault>
+        no name printed
+    </p>
+</span>
+
+
+<!-- create a gallery component - 
+    create - menu
+    use bootstrap, some random images,
+    switch case
+ -->
+
+
+<h2>Attribute directives</h2>
+
+<p [ngClass]="{'color-blue': someBoolVar,'bg-yellow':true}">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis sint aperiam aliquid.
+</p>
+
+<p [ngClass]="someBoolVar? 'color-blue':'color-green'">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis sint aperiam aliquid.
+</p>
+<!-- [(ngModel)] -->
+<!-- Assignment -->
+
+
+
+<!-- ngStyle -->
+<!-- conditional ngstyle and nclass -->
+<!-- if true color=green else color= red -->
+<!-- if +ve number color=green else color= red -->
+
+<h3>Custom directives</h3>
+
+<p appHighlight>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit adipisci nam neque necessitatibus.</p>
+
+<h2>Component directives</h2>
+<!-- angular.io / medium -->
+<!--add theory for all above and  diff between component and directive -->
